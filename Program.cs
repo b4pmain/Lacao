@@ -30,7 +30,7 @@
                 Console.WriteLine("3. Update Store");
                 Console.WriteLine("4. Delete Store");
                 Console.WriteLine("0. Exit");
-                Console.WriteLine("Enter your choice:");
+                Console.Write("Enter your choice:");
 
                 int choice = Convert.ToInt16(Console.ReadLine());
 
@@ -62,17 +62,17 @@
         static void AddStore()
         {
             Store s = new Store();
-            Console.WriteLine("Enter store name:");
+            Console.Write("Enter store name:");
             s.Name = Console.ReadLine();
-            Console.WriteLine("Enter store location:");
+            Console.Write("Enter store location:");
             s.Location = Console.ReadLine();
-            Console.WriteLine("Enter store profits: ");
+            Console.Write("Enter store profits: ");
             s.Profits = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter store expenses: ");
+            Console.Write("Enter store expenses: ");
             s.Expenses = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter store employees: ");
+            Console.Write("Enter store employees: ");
             s.Employees = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Enter store products: ");
+            Console.Write("Enter store products: ");
             s.Products = Convert.ToInt16(Console.ReadLine());
             stores.Add(s);
             Console.WriteLine("Store added successfully");
@@ -82,7 +82,7 @@
 
         static void ViewStore()
         {
-            Console.WriteLine("Enter store name to view:");
+            Console.Write("Enter store name to view:");
             string name = Console.ReadLine();
             foreach (var s in stores)
             {
@@ -98,25 +98,24 @@
                 }
             }
             Console.WriteLine("Store not found or not Registered");
-
         }
         static void UpdateStore()
         {
-            Console.WriteLine("Enter store name to update:");
+            Console.Write("Enter store name to update:");
             string name = Console.ReadLine();
             foreach (var s in stores)
             {
                 if (s.Name.Equals(name, StringComparison.OrdinalIgnoreCase))
                 {
-                    Console.WriteLine("New Location: ");
+                    Console.Write("New Location: ");
                     s.Location = Console.ReadLine();
-                    Console.WriteLine("Updated Profit: ");
+                    Console.Write("Updated Profit: ");
                     s.Profits = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Updated Expenses: ");
+                    Console.Write("Updated Expenses: ");
                     s.Expenses = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Number of Employees: ");
+                    Console.Write("Number of Employees: ");
                     s.Employees = Convert.ToInt16(Console.ReadLine());
-                    Console.WriteLine("Number of Products: ");
+                    Console.Write("Number of Products: ");
                     s.Products = Convert.ToInt16(Console.ReadLine());
 
                     Console.WriteLine("Store Details Updated Successfully");
@@ -128,7 +127,7 @@
         }
         static void DeleteStore()
         {
-            Console.WriteLine("Enter store name to delete:");
+            Console.Write("Enter store name to delete:");
             string Name = Console.ReadLine();
 
             for (int i = 0; i < stores.Count; i++)
