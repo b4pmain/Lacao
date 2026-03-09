@@ -7,9 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\StoreAppService\StoreAppService.csproj" />
-    <ProjectReference Include="..\StoreModels\StoreModels.csproj" />
-  </ItemGroup>
-
 </Project>
